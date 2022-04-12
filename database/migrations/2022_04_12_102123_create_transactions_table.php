@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->string('id_nota');
-            $table->date('tanggal');
+            $table->date('tanggal')->default(now());
             $table->foreignId('customer_id');
             $table->integer('subtotal');
             $table->timestamps();
